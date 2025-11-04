@@ -22,12 +22,12 @@ title: BNMI
 email: anders.folkesson@gu.se
 description: Welcome to BNMI 2024, Gothenburg
 
-domain: androiders.github.io
+#domain: androiders.github.io
 #baseurl:  ""
 repository: androiders/androiders.github.io
 #url: https://xfolka.github.io # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
-github_username:  androiders
+#github_username:  androiders
 #permalink: /:title/
 
 cover: "/assets/header_image.jpg"
