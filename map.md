@@ -15,5 +15,4 @@ Map over the area around wallenberg centre:
 
 
 Spread the word:
-{% include nav-share.html %}
 

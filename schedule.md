@@ -13,5 +13,4 @@ Schedule:
 
 
 Spread the word:
-{% include nav-share.html %}
 

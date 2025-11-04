@@ -20,5 +20,4 @@ Abstracts:
 {% endfor %}
 
 Spread the word:
-{% include nav-share.html %}
 
