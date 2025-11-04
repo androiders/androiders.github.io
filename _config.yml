@@ -26,7 +26,7 @@ domain: xfolka.github.io
 #baseurl:  ""
 #url: https://xfolka.github.io # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
-github_username:  xfolka
+github_username:  androiders
 #permalink: /:title/
 
 cover: "/assets/header_image.jpg"
