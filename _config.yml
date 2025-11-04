@@ -24,6 +24,7 @@ description: Welcome to BNMI 2024, Gothenburg
 
 domain: xfolka.github.io
 #baseurl:  ""
+repository: androiders.github.io
 #url: https://xfolka.github.io # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  androiders
