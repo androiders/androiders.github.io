@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/abstracts/abstr1.html</loc>
+<lastmod>2024-11-01T11:57:39+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/abstracts/abstr2.html</loc>
+<lastmod>2024-11-01T11:57:39+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/jekyll/update/2024/10/22/welcome-to-jekyll.html</loc>
+<lastmod>2024-10-22T09:42:18+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/home/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/map/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/posts/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/schedule/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/search/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/talks/</loc>
+</url>
+</urlset>
