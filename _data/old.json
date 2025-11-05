@@ -1,0 +1,72 @@
+{
+  "personal": {
+    "name": "Alex Doe",
+    "label": "Senior Software Engineer",
+    "image": "/assets/img/me.jpg",
+    "email": "alex@example.com",
+    "phone": "+46 70 123 45 67",
+    "url": "https://alexdoe.dev",
+    "summary": "Engineering lead focused on reliable systems, great DX, and measurable impact.",
+    "location": { "city": "Stockholm", "region": "SE", "country": "Sweden" },
+    "profiles": [
+      { "network": "GitHub", "username": "alexd", "url": "https://github.com/alexd" },
+      { "network": "LinkedIn", "username": "alexdoe", "url": "https://linkedin.com/in/alexdoe" }
+    ]
+  },
+  "skills": [
+    { "name": "Backend", "level": "Advanced", "keywords": ["Go", "Node.js", "Postgres", "gRPC"] },
+    { "name": "Cloud", "level": "Advanced", "keywords": ["AWS", "Kubernetes", "Terraform"] },
+    { "name": "Frontend", "level": "Intermediate", "keywords": ["React", "TypeScript", "Vite"] }
+  ],
+  "work": [
+    {
+      "name": "Nordic Fintech AB",
+      "position": "Staff Software Engineer",
+      "location": "Stockholm, Sweden",
+      "startDate": "2022-04",
+      "endDate": null,
+      "summary": "Led platform squad; cut infra costs 28% and improved deploy times 3×.",
+      "highlights": [
+        "Designed event-driven payments ledger with idempotency and auditability",
+        "Drove migration from ECS to EKS with zero downtime",
+        "Mentored 4 engineers and introduced RFC process"
+      ]
+    },
+    {
+      "name": "CloudScale Ltd.",
+      "position": "Senior Software Engineer",
+      "location": "Remote",
+      "startDate": "2019-01",
+      "endDate": "2022-03",
+      "summary": "Built multi-tenant analytics platform handling 2B events/day.",
+      "highlights": [
+        "Led Go services rewrite; reduced p99 latency 45%",
+        "Implemented CI/CD with canary + progressive delivery",
+        "Shipped GDPR tooling for exports & RTBF"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "TrailWatch",
+      "url": "https://trailwatch.example",
+      "roles": ["Creator", "Maintainer"],
+      "description": "Open-source telemetry for edge devices with offline sync.",
+      "highlights": ["3k+ GitHub stars", "Used by 12 companies"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "KTH Royal Institute of Technology",
+      "area": "Computer Science",
+      "studyType": "MSc",
+      "startDate": "2014-08",
+      "endDate": "2019-06",
+      "gpa": "4.6/5.0",
+      "courses": ["Distributed Systems", "Algorithms", "HCI"]
+    }
+  ],
+  "awards": [
+    { "title": "Best Internal Tooling", "date": "2023-11", "awarder": "Nordic Fintech AB", "summary": "Built developer portal with scorecards and self-serve infra." }
+  ]
+}

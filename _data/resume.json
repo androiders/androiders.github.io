@@ -1,0 +1,176 @@
+{
+    "personal":{
+        "name":"Anders Folkesson",
+        "label":"Tech savvy problem solver",
+        "image": "/assets/img/me.jpg",
+        "residence":"Gothenburg",
+        "phone": "+46 734 337 448",
+        "email":"andfol@gmail.com",
+        "description":"Software developer, tinkerer, kind human",
+        "github":"github.com/androiders",
+        "linkedin":"linkedin.com/in/andersfolkesson",
+        "summary":"Problem solver, programmer, tinkering 'jack of many trades' and kind human being. Not neccessarily in that order."
+    },
+    "talents": [
+        {
+            "name":"Problem Solving",
+            "description":"With many years of practice and experience I am never looking for an easy way out. I am always trying to find the real problem to solve. It is my conviction that a proper solution is the best solution in the long run."
+        },
+        {
+            "name":"Quick Learner",
+            "description":"With a broad and varied knowledge base, long experience and interest in technology, It is easy for me to understand new tasks in different domains."
+        },
+        {
+            "name":"Cooperative",
+            "description":"I strongly beleive in cooperation and knowledge sharing. Helping my collegues whenever I can and not afraid of asking for help when needed. Kindness and caring is important on every workplace (everywhere really)."
+        }
+    ],
+
+    "skills": [
+    { "name": "Programming languages", "level": "Advanced", "keywords": ["C/C++", "Python", "Javascript", "etc..."] },
+    { "name": "Frameworks/api", "level": "Advanced", "keywords": ["Qt", "azure", "containers"] },
+    { "name": "Tools", "level": "Advanced", "keywords": ["Git", "build systems", "scripting","workflows","databases"] },
+    { "name": "Misc", "level": "Advanced", "keywords": ["Windows", "Linux", "Scrum"] }
+  ],
+    "interests": [
+        {
+            "icon":"filename",
+            "name":"Making Music"
+        },
+        {
+            "icon":"Guitar Playing",
+            "name":"Guitar Playing"
+        },
+        {
+            "icon":"DIY",
+            "name":"DIY"
+        },
+        {
+            "icon":"Wood Working",
+            "name":"Wood Working"
+        },
+        {
+            "icon":"Working Out",
+            "name":"Working Out"
+        },
+        {
+            "icon":"Electronics Design",
+            "name":"Electronics Design"
+        },
+        {
+            "icon":"Micro Controllers",
+            "name":"Micro Controllers"
+        },
+        {
+            "icon":"arts and crafts",
+            "name":"Arts and crafts"
+        },
+        {
+            "icon":"Sewing",
+            "name":"Sewing"
+        }
+
+    ],
+    "work":[ 
+        {
+            "name":"Mentice AB",
+            "startDate":"Sep 2018",
+            "endDate":"Present",
+            "position": "Platform Developer",
+            "summary":"Member of the platform team with responsibility to maintain and develop the main software platform as well as the rest of the software stack. I also work closely with the hardware/firmware developers. Our main product is the VIST medical simulator for various endovascular surgery procedures.",
+            "tech":["C/C++"," Qt"," javascript"," azure devops"," qml"," git"," python"," Visual Studio", " Eclipse"],
+            "highlights":["Devops", " Problem Solving"," Planning and Execution"]
+        },
+        {
+            "name":"Mentice AB",
+            "startDate":"May 2015",
+            "endDate":"Sep 2018",
+            "position": "Product Developer",
+            "summary":"Implementing customer requests in our medical simulator. My tasks included scripting of new features, configuring hardware and implementing new software in and around the main simulator.",
+            "tech":["Qt"," javascript"," Java"," C/C++"," Visual Studio", " Eclipse"],
+            "highlights":["Requirement brake down"," Problem Solving"]
+        },
+        {
+            "name":"Cybercom Group",
+            "startDate":"Nov 2010",
+            "endDate":"Apr 2015",
+            "position": "Programmer/Consultant",
+            "summary":"Consultant at the Embedded group. Working with software development in both telecom and automotive as well as other areas, often using and agile methodology. Working as a scrum master in some projects I found the scrum way of working very enjoyable and smart.",
+            "tech":["Qt"," Java"," C/C++"],
+            "highlights":["Scrum"," Consulting"," Cross Functionality"]
+        },
+        {
+            "name":"Styra Robotics AB",
+            "startDate":"Apr 2010",
+            "endDate":"Nov 2010",
+            "position": "Programmer (my own firm)",
+            "summary":"Developing a system for simulation of four, five and six axis industrial robots.",
+            "tech":["Windows C/C++"],
+            "highlights":[]
+        },
+        {
+            "name":"Enmesh AB",
+            "startDate":"Oct 2007",
+            "endDate":"Mar 2010",
+            "position": "Programmer",
+            "summary":"Development of a CAD/FEM software. Workd on ui/3D as well as other areas of the program.",
+            "tech":["Qt"," C++"],
+            "highlights":[]
+        },
+        {
+            "name":"Edoctrina AB",
+            "startDate":"Sep 2007",
+            "endDate":"Oct 2007",
+            "position": "Programmer",
+            "summary":"Development of an e-learning program in Java where existing school book assignments (math and physics mostly) were made interactive.",
+            "tech":["Java"," Java 3D"],
+            "highlights":[]
+        }
+
+    ],
+    "education": [
+        {
+            "school":"University of Gothenburg, Chalmers",
+            "startDate":"2003",
+            "endDate":"2004",
+            "name":"Masters Program: Complex Adaptive Systems",
+            "summary":"Masters program with focus on evolving and emergent systems. Using and studying AI, ANN, genetic algorithms and machine learning."
+        },
+        {
+            "school":"University of Gothenburg",
+            "startDate":"1999",
+            "endDate":"2003",
+            "name":"Computer Science",
+            "summary":"Studied Computer Science at GU. Courses included Algorithms, operating systems, Software development, 3D and more."
+        },
+        {
+            "school":"Sven-Ericsson Gymnasiet",
+            "startDate":"1993",
+            "endDate":"1997",
+            "name":"Tekniska programmet på gymnasiet",
+            "summary":""
+        },
+        {
+            "school":"Coursera Online University Class",
+            "startDate":"",
+            "endDate":"",
+            "name":"Programming Mobile Applications for Android Handheld Systems",
+            "summary":"Online course in android programming."
+        },
+        {
+            "school":"Coursera Online University Class",
+            "startDate":"",
+            "endDate":"",
+            "name":"Programming Mobile Services for Android Handheld Systems: Concurrency",
+            "summary":"Online course in android programming. Focusing on concurrency and continuing on the previous course."
+        },
+        {
+            "school":"Various courses and educations",
+            "startDate":"",
+            "endDate":"",
+            "name":"To satisfy my curiosity and to fan the flame of my desire to learn",
+            "summary":"Carpenter joinery (diploma course), black smithing, piano and guitar, clown and improvisation, singing, drawing, sports education"
+        }
+
+    ]
+}

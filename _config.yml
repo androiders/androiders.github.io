@@ -44,7 +44,10 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate-v2
-  - jekyll-redirect-from
+  - jekyll-redirect-from  
+  - jekyll-get-json
+
+
 
 # Build settings
 markdown: kramdown

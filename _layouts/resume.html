@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% assign data_key = page.data_key | default: 'resume' %}
+  <title>{{ site.data[data_key].personal.name }} — {{ site.data[data_key].personal.label }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+</head>
+<body>
+  {% assign r = site.data[data_key] %}
+  {% unless r %}
+  <div style="padding:12px;border:1px solid #e0b4b4;background:#fff6f6;color:#9f3a38;border-radius:8px;margin:16px 0;">
+    <strong>No data found for <code>{{ data_key }}</code>.</strong>
+    <div>Available data keys:</div>
+    <ul style="margin:.5rem 0 0 1.25rem;">
+      {% for pair in site.data %}
+        <li>{{ pair[0] }}</li>
+      {% endfor %}
+    </ul>
+    <div style="margin-top:.5rem;">Check your <code>_config.yml</code> <em>jekyll_get_json</em> URL and make sure you’re running <code>bundle exec jekyll serve</code>.</div>
+  </div>
+{% endunless %}
+  <main class="cv">
+    <aside class="cv__sidebar">
+      <div class="cv__avatar">
+        {% if r.personal.image %}
+          <img src="{{ r.personal.image | relative_url }}" alt="Portrait of {{ r.personal.name }}">
+        {% endif %}
+      </div>
+
+      <h1 class="cv__name">{{ r.personal.name }}</h1>
+      {% if r.personal.label %}<p class="cv__label">{{ r.personal.label }}</p>{% endif %}
+
+      {% if r.personal.summary %}
+      <p class="cv__summary">{{ r.personal.summary }}</p>
+      {% endif %}
+
+      <dl class="cv__contact">
+        {% if r.personal.email %}
+          <div><dt>Email</dt><dd><a href="mailto:{{ r.personal.email }}">{{ r.personal.email }}</a></dd></div>
+        {% endif %}
+        {% if r.personal.phone %}
+          <div><dt>Phone</dt><dd><a href="tel:{{ r.personal.phone }}">{{ r.personal.phone }}</a></dd></div>
+        {% endif %}
+        {% if r.personal.url %}
+          <div><dt>Website</dt><dd><a href="{{ r.personal.url }}" target="_blank" rel="noreferrer noopener">{{ r.personal.url | replace: 'https://','' | replace: 'http://','' }}</a></dd></div>
+        {% endif %}
+        {% if r.personal.location %}
+          {% assign loc = r.personal.location %}
+          {% if loc.city or loc.region or loc.country %}
+            <div><dt>Location</dt><dd>{{ loc.city }}{% if loc.city and (loc.region or loc.country) %}, {% endif %}{{ loc.region }}{% if loc.region and loc.country %}, {% endif %}{{ loc.country }}</dd></div>
+          {% endif %}
+        {% endif %}
+      </dl>
+
+      {% if r.personal.profiles %}
+      <ul class="cv__profiles">
+        {% for p in r.personal.profiles %}
+          <li>
+            <a href="{{ p.url }}" target="_blank" rel="noreferrer noopener">{{ p.network }}{% if p.username %} · {{ p.username }}{% endif %}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if r.skills %}
+      <section class="cv__block">
+        <h2>Skills</h2>
+        {% for s in r.skills %}
+          <div class="skill">
+            <div class="skill__name">{{ s.name }}</div>
+            {% if s.level %}<div class="skill__level" aria-label="Level: {{ s.level }}">{{ s.level }}</div>{% endif %}
+            {% if s.keywords %}
+              <ul class="skill__tags">
+                {% for k in s.keywords %}
+                  <li>{{ k }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+     {% if r.interests %}
+      <section class="cv__block">
+        <h2>Interests</h2>
+          <div class="skill">
+            <ul class="skill__tags">
+            {% for s in r.interests %}
+                <li>{{ s.name }}</li>
+            {% endfor %}
+            </ul>
+          </div>
+      </section>
+      {% endif %}
+
+    </aside>
+
+    <section class="cv__main">
+        {% if r.talents %}
+      <section class="cv__block">
+        <h2>Talents</h2>
+        {% for p in r.talents %}
+          <article class="item">
+            <header>
+              <h3>{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noreferrer noopener">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
+              {% if p.roles %}<div class="meta">{{ p.roles | join: ', ' }}</div>{% endif %}
+            </header>
+            {% if p.description %}<p>{{ p.description }}</p>{% endif %}
+            {% if p.highlights %}
+              <ul class="highlights">
+                {% for h in p.highlights %}
+                  <li>{{ h }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </section>
+      {% endif %}
+      {% if r.work %}
+      <section class="cv__block">
+        <h2>Experience</h2>
+        {% for w in r.work %}
+          <article class="item">
+            <header>
+              <h3>{{ w.position }}</h3>
+              <div class="meta">
+                <span class="org">{{ w.name }}</span>
+                {% if w.location %}<span class="sep">•</span><span class="loc">{{ w.location }}</span>{% endif %}
+                {% if w.startDate %}
+                  <span class="sep">•</span>
+                  <time datetime="{{ w.startDate }}">{{ w.startDate }}</time>
+                  {% if w.endDate %}–<time datetime="{{ w.endDate }}">{{ w.endDate }}</time>{% else %}–<span>Present</span>{% endif %}
+                {% endif %}
+              </div>
+            </header>
+            {% if w.summary %}<p>{{ w.summary }}</p>{% endif %}
+            {% if w.highlights and w.highlights.size > 0%}
+            <b>Skills:</b>
+            <ul class="highlights">
+              {% for h in w.highlights %}
+                <li>{{ h }},</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            {% if w.tech and w.tech.size > 0%}
+            <b>Tech:</b>
+            <ul class="highlights">
+              {% for t in w.tech %}
+                <li>{{ t }},</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      {% if r.education %}
+      <section class="cv__block">
+        <h2>Education</h2>
+        {% for e in r.education %}
+          <article class="item">
+            <header>
+              <h3>{{ e.name }}</h3>
+              <div class="meta">
+                <span class="org">{{ e.school }}</span>
+                {% if e.startDate %}
+                  <span class="sep">•</span>
+                  <time datetime="{{ e.startDate }}">{{ e.startDate }}</time>
+                  {% if e.endDate %}–<time datetime="{{ e.endDate }}">{{ e.endDate }}</time>{% endif %}
+                {% endif %}
+              </div>
+            </header>
+            {% if e.summary %}
+                  {{e.summary}}
+            {% endif %}
+          </article>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      {% if r.awards %}
+      <section class="cv__block">
+        <h2>Awards</h2>
+        {% for a in r.awards %}
+          <article class="item">
+            <header>
+              <h3>{{ a.title }}</h3>
+              <div class="meta">
+                <span class="org">{{ a.awarder }}</span>
+                {% if a.date %}
+                  <span class="sep">•</span>
+                  <time datetime="{{ a.date }}">{{ a.date }}</time>
+                {% endif %}
+              </div>
+            </header>
+            {% if a.summary %}<p>{{ a.summary }}</p>{% endif %}
+          </article>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+    </section>
+  </main>
+</body>
+</html>
