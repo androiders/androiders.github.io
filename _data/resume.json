@@ -3,12 +3,15 @@
         "name":"Anders Folkesson",
         "label":"Tech savvy problem solver",
         "image": "/assets/img/me.jpg",
-        "residence":"Gothenburg",
+         "location": { "city": "Gothenburg", "region": "SE", "country": "Sweden" },
         "phone": "+46 734 337 448",
         "email":"andfol@gmail.com",
         "description":"Software developer, tinkerer, kind human",
-        "github":"github.com/androiders",
-        "linkedin":"linkedin.com/in/andersfolkesson",
+        "url": "androiders.github.io",
+        "profiles": [
+            { "network": "GitHub", "username": "alexd", "url": "github.com/androiders" },
+            { "network": "LinkedIn", "username": "Anders Folkesson", "url": "https://linkedin.com/in/AndersFolkesson" }
+        ],
         "summary":"Problem solver, programmer, tinkering 'jack of many trades' and kind human being. Not neccessarily in that order."
     },
     "talents": [
@@ -73,9 +76,18 @@
     ],
     "work":[ 
         {
+            "name":"University of Gothenburg",
+            "startDate":"June 2024",
+            "endDate":"Present",
+            "position": "Platform Developer",
+            "summary":"Member of the platform team with responsibility to maintain and develop the main software platform as well as the rest of the software stack. I also work closely with the hardware/firmware developers. Our main product is the VIST medical simulator for various endovascular surgery procedures.",
+            "tech":["C/C++"," Qt"," javascript"," azure devops"," qml"," git"," python"," Visual Studio", " Eclipse"],
+            "highlights":["Devops", " Problem Solving"," Planning and Execution"]
+        },
+        {
             "name":"Mentice AB",
             "startDate":"Sep 2018",
-            "endDate":"Present",
+            "endDate":"Feb 2024",
             "position": "Platform Developer",
             "summary":"Member of the platform team with responsibility to maintain and develop the main software platform as well as the rest of the software stack. I also work closely with the hardware/firmware developers. Our main product is the VIST medical simulator for various endovascular surgery procedures.",
             "tech":["C/C++"," Qt"," javascript"," azure devops"," qml"," git"," python"," Visual Studio", " Eclipse"],
