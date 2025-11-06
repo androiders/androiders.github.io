@@ -9,8 +9,8 @@
         "description":"Software developer, tinkerer, kind human",
         "url": "androiders.github.io",
         "profiles": [
-            { "network": "GitHub", "username": "androiders", "url": "github.com/androiders" },
-            { "network": "LinkedIn", "username": "Anders Folkesson", "url": "https://linkedin.com/in/AndersFolkesson" }
+            { "network": "GitHub", "username": "androiders", "url": "https://github.com/androiders" },
+            { "network": "LinkedIn", "username": "Anders Folkesson", "url": "https://www.linkedin.com/in/andersfolkesson" }
         ],
         "summary":"Problem solver, programmer, tinkering 'jack of many trades' and kind human being. Not neccessarily in that order."
     },
@@ -80,7 +80,7 @@
             "startDate":"June 2024",
             "endDate":"Present",
             "position": "Research Engineer",
-            "summary":"Member of the platform team with responsibility to maintain and develop the main software platform as well as the rest of the software stack. I also work closely with the hardware/firmware developers. Our main product is the VIST medical simulator for various endovascular surgery procedures.",
+            "summary":"Working as a research engineer at the Sahlgrenska Academy, University of Gothenburg. Our core facility 'Centre for cellular imaging' provides state of the art microscopes and assistance to researchers. My main tasks are to maintain and develop software for automating image acquisition, processing and analysis. The work involves close cooperation with researchers and colleagues",
             "tech":["Python"," Qt"," git"," Image analysis"," Containers", " Machine learning"],
             "highlights":["Full stack", " Problem Solving"," Customer Interaction", " Education"]
         },
