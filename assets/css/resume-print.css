@@ -1,0 +1,123 @@
+
+.pdf-mode .cv{
+  display:block !important;
+  max-width:100% !important;
+  margin:0 !important;
+  padding:0 6mm !important;
+}
+
+.pdf-mode .cv__block{ margin:6mm 0 !important; }
+
+/* Optional: hide the floating button while exporting */
+.pdf-mode .print-btn{ display:none !important; }
+
+.pdf-mode .cv__avatar{ 
+    /* display:flex;  */
+    justify-content:center; 
+    margin-bottom:16px; }
+.pdf-mode .cv__avatar img{ 
+    width: 240px; 
+    height:240px; 
+    object-fit:cover; 
+    border-radius:24px; 
+    box-shadow: 0 6px 24px rgba(0,0,0,.25); 
+    border:1px solid var(--border); 
+}
+
+.pdf-mode .cv__block{ margin: 0px 0 0px; }
+.pdf-mode .cv__block h2{ font-size: 1.2rem; letter-spacing:.02em; margin:0 0 4px; color: var(--accent-2); }
+
+.pdf-mode .cv__profiles{ list-style:none; padding:0; margin: 5px 0 0; display:flex; flex-wrap:wrap; gap:8px; }
+.pdf-mode .cv__profiles li{ background: var(--panel-2); border:1px solid var(--border); padding:6px 10px; border-radius:999px; }
+.pdf-mode .cv__profiles a{ color: var(--text); text-decoration:none; }
+
+
+/* html2pdf fallback (.pdf-mode class) */
+.pdf-mode body,
+.pdf-mode .cv__sidebar,
+.pdf-mode .cv__main {
+  background: #fff !important;
+  color: #000 !important;
+  border: 0 !important;
+}
+
+.pdf-mode .item,
+.pdf-mode .skill {
+  break-inside: avoid !important;
+  page-break-inside:avoid; 
+  background: #ffffff !important;
+  border: 2px solid #d3d6dc !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+
+.pdf-mode .skill__tags li
+ /* .pdf-mode .highlights li */
+ {
+  background: #f6f6f6 !important;
+  border: 1px solid #d3d6dc !important;
+  border-radius: 8px !important;
+  color: #000 !important;
+}
+
+.pdf-mode a {
+  color: #000 !important;
+  text-decoration: none;
+}
+.pdf-mode a:hover {
+  text-decoration: underline !important;
+}
+
+.pdf-mode .cv__profiles li{ background: #f6f6f6 !important; border:1px solid var(--border); padding:6px 10px; border-radius:999px; }
+.pdf-mode .cv__summary{ color: #000; }
+
+
+/* Apply both on print and when html2pdf adds .pdf-mode */
+@media print {
+
+    @page{ size:A4; margin:12mm; }
+
+  body{ 
+    color: #000 !important;
+    background:#fff !important;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+ .cv{ display:block !important; max-width:100% !important; margin:0 !important; padding:0 6mm !important; }
+
+ .cv__main, 
+ .cv__sidebar { 
+    display:block !important; 
+    width:100% !important; 
+    margin:0 0 8mm 0 !important; 
+    background:#fff !important; 
+    color: #000 !important;
+    border:0 !important; 
+    border-radius:0 !important; 
+    box-shadow:none !important; 
+    padding:0 !important; 
+  }
+  .cv__block{ margin:6mm 0 !important; }
+
+  .item,
+  .skill { 
+    break-inside:avoid; 
+    page-break-inside:avoid; 
+    margin-bottom:4mm !important; 
+    background:none !important; 
+    border: 1px solid #d3d6dc !important;
+  }
+  .print-btn{ display:none !important; }
+
+
+  a {
+    color: #000 !important;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline !important;
+  }
+}

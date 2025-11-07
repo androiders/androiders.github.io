@@ -8,6 +8,7 @@
         "email":"andfol@gmail.com",
         "description":"Software developer, tinkerer, kind human",
         "url": "https://androiders.github.io/resume",
+        "cvurl": "https://androiders.github.io/resume",
         "profiles": [
             { "network": "GitHub", "username": "androiders", "url": "https://github.com/androiders" },
             { "network": "LinkedIn", "username": "Anders Folkesson", "url": "https://www.linkedin.com/in/andersfolkesson" }
@@ -81,7 +82,7 @@
             "endDate":"Present",
             "position": "Research Engineer",
             "summary":"Working as a research engineer at the Sahlgrenska Academy, University of Gothenburg. Our core facility 'Centre for cellular imaging' provides state of the art microscopes and assistance to researchers. My main tasks are to maintain and develop software for automating image acquisition, processing and analysis. The work involves close cooperation with researchers and colleagues.",
-            "tech":["Python"," Qt"," git"," Image analysis"," Containers", " Machine learning"],
+            "tech":["Python"," Qt"," git"," Image analysis"," Containers", " Machine learning"," bio image workflows"],
             "highlights":["Full stack", " Problem Solving"," Customer Interaction", " Education"]
         },
         {

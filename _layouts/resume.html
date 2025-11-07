@@ -6,6 +6,7 @@
   {% assign data_key = page.data_key | default: 'resume' %}
   <title>{{ site.data[data_key].personal.name }} — {{ site.data[data_key].personal.label }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/resume-print.css' | relative_url }}">
 </head>
 <body>
   {% assign r = site.data[data_key] %}
@@ -27,6 +28,10 @@
         {% if r.personal.image %}
           <img src="{{ r.personal.image | relative_url }}" alt="Portrait of {{ r.personal.name }}">
         {% endif %}
+      </div>
+
+      <div class="avatar-button">
+         <button id="exportPDF" class="print-btn" type="button">Download PDF</button>
       </div>
 
       <h1 class="cv__name">{{ r.personal.name }}</h1>
@@ -206,5 +211,42 @@
 
     </section>
   </main>
+
+  <!-- html2pdf.js (CDN). For full control, you can host this file locally instead. -->
+  <!-- <script src="{{ '/assets/js/html2pdf.bundle.min.js' | relative_url }}"></script> -->
+
+ <script>
+(async () => {
+  const btn = document.getElementById('exportPDF');
+  if (!btn) return;
+
+  async function ensureLib() {
+    if (window.html2pdf) return true;
+    await new Promise(r => {
+      const s = document.createElement('script');
+      s.src = "{{ 'assets/js/html2pdf.bundle.min.js' | relative_url }}";
+      s.onload = r; s.onerror = r; document.head.appendChild(s);
+    });
+    return !!window.html2pdf;
+  }
+
+  btn.addEventListener('click', async () => {
+    document.body.classList.add('pdf-mode');              // apply stacked/wide PDF layout
+    const hasLib = await ensureLib();
+    const root = document.querySelector('main.cv') || document.body;
+
+    if (!hasLib) { window.print(); document.body.classList.remove('pdf-mode'); return; }
+
+    const name = (document.querySelector('.cv__name')?.textContent || 'resume').trim();
+    const opt  = { margin:[10,10,10,10], filename:`${name.replace(/\s+/g,'_').toLowerCase()}_cv.pdf`,
+                   image:{type:'jpeg',quality:0.98}, html2canvas:{scale:2,useCORS:true,allowTaint:true},
+                   jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}, pagebreak:{mode:['avoid-all','css','legacy']} };
+
+    try { await html2pdf().from(root).set(opt).save(); }
+    finally { document.body.classList.remove('pdf-mode'); } // restore screen layout
+  });
+})();
+</script>
+
 </body>
 </html>
