@@ -81,7 +81,7 @@
             "startDate":"June 2024",
             "endDate":"Present",
             "position": "Research Engineer",
-            "summary":"Working as a research engineer at the Sahlgrenska Academy, University of Gothenburg. Our core facility 'Centre for cellular imaging' provides state of the art microscopes and assistance to researchers. My main tasks are to maintain and develop software for automating image acquisition, processing and analysis. The work involves close cooperation with researchers and colleagues.",
+            "summary":"Working as a research engineer at the Sahlgrenska Academy, University of Gothenburg. Our core facility 'Centre for cellular imaging' provides state of the art microscopes and assistance to researchers. My main tasks are to maintain and develop software for automating image acquisition, processing and analysis. The work involves close cooperation with researchers and colleagues. Part of my time is also spent on teaching python and analysis to phd students.",
             "tech":["Python"," Qt"," git"," Image analysis"," Containers", " Machine learning"," bio image workflows"],
             "highlights":["Full stack", " Problem Solving"," Customer Interaction", " Education"]
         },
